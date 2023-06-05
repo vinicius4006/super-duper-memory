@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
   },
 });
 
+
 const SignIn: React.FC = () => {
   const { signed, user, token } = useContext(AuthContext);
   console.log(signed, user, token);
