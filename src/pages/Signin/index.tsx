@@ -18,13 +18,26 @@ const SignIn: React.FC = () => {
   const emailRegex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const handleSign = () => {
-    if (!errorForm.email && !errorForm.password) {
-      signIn(userForm);
-    }
+    if (validador()) signIn(userForm);
   };
   const handleSignUp = () => {
-    if (!errorForm.email && !errorForm.password) {
-      signUp(userForm);
+    if (validador()) signUp(userForm);
+  };
+
+  const validador = (): boolean => {
+    if (
+      !errorForm.email &&
+      !errorForm.password &&
+      userForm.email.length > 0 &&
+      userForm.password.length > 0
+    ) {
+      return true;
+    } else {
+      setErrorForm({
+        email: !emailRegex.test(userForm.email),
+        password: userForm.password.length === 0,
+      });
+      return false;
     }
   };
 
