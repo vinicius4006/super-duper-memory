@@ -1,55 +1,62 @@
 import { StyleSheet } from 'react-native';
 
-export default styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#fff'
-  },
-
-  containerLogo: {
-    flex: 1,
-    justifyContent: 'center'
-  },
-  
-  form: {
-    flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
-    width: '90%',
-    paddingBottom: 25
+    marginBottom: 200
   },
-
+  inputContainer: {
+    width: '80%'
+  },
   input: {
-    backgroundColor: '#FFF',
-    width: '90%',
-    marginBottom: 15,
-    color: '#222',
-    fontSize: 22,
-    borderRadius: 7,
-    padding: 10
+    backgroundColor: 'white',
+    paddingHorizontal: 15,
+    paddingVertical: 20,
+    borderRadius: 10,
+    marginTop: 5,
   },
-
-  buttonSubmit: {
-    backgroundColor: '#59BFFF',
-    width: '90%',
-    height: 45,
-    alignItems: 'center',
+  inputError: {
+    borderColor: 'red',
+    borderWidth: 2,
+    paddingHorizontal: 15,
+    paddingVertical: 20,
+    borderRadius: 10,
+    marginTop: 5,
+  },
+  buttonContainer: {
+    width: '60%',
     justifyContent: 'center',
-    borderRadius: 7
+    alignItems: 'center',
+    marginTop: 40,
   },
-
-  submitText: {
-    color: '#FFF',
-    fontSize: 19
+  button: {
+    backgroundColor: '#0782F9',
+    width: '100%',
+    padding: 15,
+    borderRadius: 10,
+    alignItems: 'center',
   },
-
-  buttonRegister: {
-    marginTop: 10
+  buttonOutline: {
+    backgroundColor: 'white',
+    marginTop: 5,
+    borderColor: '#0782F9',
+    borderWidth: 2,
   },
-
-  registerText: {
-    color: '#FFF'
-  }
-});
+  buttonText: {
+    color: 'white',
+    fontWeight: '700',
+    fontSize: 16,
+  },
+  buttonOutlineText: {
+    color: '#0782F9',
+    fontWeight: '700',
+    fontSize: 16,
+  },
+  errorMsg: {
+    color: 'red',
+    fontSize: 12,
+    marginTop: 5,
+  },
+})
