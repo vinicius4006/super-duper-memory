@@ -1,7 +1,8 @@
-import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import React from "react";
+import { createStackNavigator } from "@react-navigation/stack";
 
-import SignIn from '../pages/Signin';
+import SignIn from "../pages/Signin";
+import { CardProvider } from "../contexts/controllerCard";
 
 const AuthStack = createStackNavigator();
 
