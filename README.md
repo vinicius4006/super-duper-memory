@@ -53,6 +53,14 @@ Este é um aplicativo de tarefas simples desenvolvido com React Native e Expo. E
 
 4. Siga as instruções fornecidas no painel de controle do Expo para executar o aplicativo em seu ambiente escolhido.
 
+## Imagens do Aplicativo
+
+### Login
+
+![IMG_0744](https://github.com/vinicius4006/super-duper-memory/assets/28130158/bc94a323-16a4-4b08-87e0-cd5986a5a2dc)
+
+
+
 ## Contribuição
 
 Se você quiser contribuir para este projeto, fique à vontade para criar um pull request com suas melhorias. Será um prazer revisar suas contribuições.
