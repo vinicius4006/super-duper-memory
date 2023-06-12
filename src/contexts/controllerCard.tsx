@@ -9,6 +9,7 @@ interface CardContextData {
   loadData(): void;
   removerCard(id: number): void;
   filtrarTags(tagEmpresa: string[], tagStatus: boolean | null): void;
+  salvarTarefa(card: CardInfo): void;
 }
 
 export const CardProvider: React.FC<React.PropsWithChildren<{}>> = ({
@@ -147,9 +148,14 @@ export const CardProvider: React.FC<React.PropsWithChildren<{}>> = ({
       setCards(filteredCards);
     }
   };
+  const salvarTarefa = async (card: CardInfo) => {
+    setCards((prevCards) => [...prevCards, card]);
+  };
 
   return (
-    <CardContext.Provider value={{ loadData, cards, removerCard, filtrarTags }}>
+    <CardContext.Provider
+      value={{ loadData, cards, removerCard, filtrarTags, salvarTarefa }}
+    >
       {children}
     </CardContext.Provider>
   );

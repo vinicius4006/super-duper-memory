@@ -23,15 +23,20 @@ export const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: "white",
-    paddingHorizontal: 100,
-    paddingVertical: 25,
+    paddingVertical: 15,
     borderRadius: 10,
     marginTop: 5,
+    maxWidth: 200,
+    maxWidth: 200,
   },
   button: {
     borderRadius: 10,
     marginTop: 30,
     padding: 15,
     backgroundColor: "#0494fc",
+  },
+  sidebyside: {
+    flex: 0,
+    flexDirection: "row",
   },
 });

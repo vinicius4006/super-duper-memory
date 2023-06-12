@@ -34,7 +34,7 @@ const Dashboard: React.FC = () => {
         )}
 
         <FlatList
-          data={cards}
+          data={cards.reverse()}
           renderItem={(itemInfo) => (
             <Card key={itemInfo.index} card={itemInfo.item} />
           )}
