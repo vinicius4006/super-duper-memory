@@ -57,7 +57,7 @@ Este é um aplicativo de tarefas simples desenvolvido com React Native e Expo. E
 
 ### Login
 
-| <img src="https://github.com/vinicius4006/super-duper-memory/assets/28130158/bc94a323-16a4-4b08-87e0-cd5986a5a2dc" alt="Imagem 1" width="100"> | <img src="" alt="Imagem 2" width="100"> | <img src="" alt="Imagem 3" width="100"> | <img src="" alt="Imagem 4" width="100"> | <img src="" alt="Imagem 5" width="100"> |
+| <img src="https://github.com/vinicius4006/super-duper-memory/assets/28130158/bc94a323-16a4-4b08-87e0-cd5986a5a2dc" alt="Imagem 1" width="300"> | <img src="" alt="Imagem 2" width="100"> | <img src="" alt="Imagem 3" width="100"> | <img src="" alt="Imagem 4" width="100"> | <img src="" alt="Imagem 5" width="100"> |
 | :-------------------------------------------------------------: | :-------------------------------------------------------------: | :-------------------------------------------------------------: | :-------------------------------------------------------------: | :-------------------------------------------------------------: |
 |                       Legenda da Imagem 1                         |                       Legenda da Imagem 2                         |                       Legenda da Imagem 3                         |                       Legenda da Imagem 4                         |                       Legenda da Imagem 5                         |
 
