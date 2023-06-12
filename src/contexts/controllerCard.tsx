@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { CardInfo } from "../data/Card";
+import { Status, Tags } from "../data/enums";
 
 const CardContext = createContext<CardContextData>({} as CardContextData);
 
@@ -7,30 +8,118 @@ interface CardContextData {
   cards: CardInfo[];
   loadData(): void;
   removerCard(id: number): void;
+  filtrarTags(tagEmpresa: string[], tagStatus: boolean | null): void;
 }
 
 export const CardProvider: React.FC<React.PropsWithChildren<{}>> = ({
   children,
 }) => {
   const [cards, setCards] = useState<CardInfo[]>([]);
+  const [cpCards, setCpCards] = useState<CardInfo[]>([]);
 
   const loadData = async () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    setCards([
-      new CardInfo(1, true, "Exemplo de texto", "8:00", "13/06", "básico"),
-      new CardInfo(2, false, "Exemplo de texto 2", "9:00", "14/06", "urgente"),
-      new CardInfo(4, false, "Exemplo de texto 3", "10:00", "15/06", "mercado"),
-      new CardInfo(5, false, "Exemplo de texto 3", "10:00", "15/06", "mercado"),
-      new CardInfo(6, false, "Exemplo de texto 3", "10:00", "15/06", "mercado"),
-      new CardInfo(7, false, "Exemplo de texto 3", "10:00", "15/06", "mercado"),
-      new CardInfo(8, false, "Exemplo de texto 3", "10:00", "15/06", "mercado"),
-      new CardInfo(9, false, "Exemplo de texto 3", "10:00", "15/06", "mercado"),
-      new CardInfo(10, false, "Exemplo de texto 3", "10:00", "15/06", "mercado"),
-      new CardInfo(11, false, "Exemplo de texto 3", "10:00", "15/06", "mercado"),
-      new CardInfo(12, false, "Exemplo de texto 3", "10:00", "15/06", "mercado"),
-      new CardInfo(13, false, "Exemplo de texto 3", "10:00", "15/06", "mercado"),
-      new CardInfo(14, false, "Exemplo de texto 3", "10:00", "15/06", "mercado"),
-    ]);
+    const mock = [
+      new CardInfo(1, true, "Exemplo de texto", "8:00", "13/06", Tags.Q2BANK),
+      new CardInfo(
+        2,
+        false,
+        "Exemplo de texto 2",
+        "9:00",
+        "14/06",
+        Tags.Q2INGRESSOS
+      ),
+      new CardInfo(
+        4,
+        false,
+        "Exemplo de texto 3",
+        "10:00",
+        "15/06",
+        Tags.Q2PAY
+      ),
+      new CardInfo(
+        5,
+        false,
+        "Exemplo de texto 3",
+        "10:00",
+        "15/06",
+        Tags.Q2BANK
+      ),
+      new CardInfo(
+        6,
+        false,
+        "Exemplo de texto 3",
+        "10:00",
+        "15/06",
+        Tags.Q2INGRESSOS
+      ),
+      new CardInfo(
+        7,
+        false,
+        "Exemplo de texto 3",
+        "10:00",
+        "15/06",
+        Tags.Q2PAY
+      ),
+      new CardInfo(
+        8,
+        false,
+        "Exemplo de texto 3",
+        "10:00",
+        "15/06",
+        Tags.Q2BANK
+      ),
+      new CardInfo(
+        9,
+        false,
+        "Exemplo de texto 3",
+        "10:00",
+        "15/06",
+        Tags.Q2INGRESSOS
+      ),
+      new CardInfo(
+        10,
+        false,
+        "Exemplo de texto 3",
+        "10:00",
+        "15/06",
+        Tags.Q2PAY
+      ),
+      new CardInfo(
+        11,
+        false,
+        "Exemplo de texto 3",
+        "10:00",
+        "15/06",
+        Tags.Q2BANK
+      ),
+      new CardInfo(
+        12,
+        false,
+        "Exemplo de texto 3",
+        "10:00",
+        "15/06",
+        Tags.Q2INGRESSOS
+      ),
+      new CardInfo(
+        13,
+        false,
+        "Exemplo de texto 3",
+        "10:00",
+        "15/06",
+        Tags.Q2PAY
+      ),
+      new CardInfo(
+        14,
+        false,
+        "Exemplo de texto 3",
+        "10:00",
+        "15/06",
+        Tags.Q2BANK
+      ),
+    ];
+    setCards(mock);
+    setCpCards(mock);
   };
 
   const removerCard = async (id: number) => {
@@ -38,8 +127,29 @@ export const CardProvider: React.FC<React.PropsWithChildren<{}>> = ({
     setCards(newCards);
   };
 
+  const filtrarTags = (tagEmpresa: string[], tagStatus: boolean | null) => {
+    if (tagEmpresa.length === 0 && tagStatus === null) {
+      setCards(cpCards);
+    } else if (tagEmpresa.length !== 0 && tagStatus !== null) {
+      const filteredCards = [...cpCards].filter(
+        (c) => tagEmpresa.includes(c.tag) && c.checked === tagStatus
+      );
+      setCards(filteredCards);
+    } else if (tagEmpresa.length !== 0 && tagStatus === null) {
+      const filteredCards = [...cpCards].filter((c) =>
+        tagEmpresa.includes(c.tag)
+      );
+      setCards(filteredCards);
+    } else {
+      const filteredCards = [...cpCards].filter(
+        (c) => c.checked === !tagStatus
+      );
+      setCards(filteredCards);
+    }
+  };
+
   return (
-    <CardContext.Provider value={{ loadData, cards, removerCard }}>
+    <CardContext.Provider value={{ loadData, cards, removerCard, filtrarTags }}>
       {children}
     </CardContext.Provider>
   );

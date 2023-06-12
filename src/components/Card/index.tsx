@@ -13,7 +13,6 @@ const Card = ({ card }: { card: CardInfo }) => {
   const [cardInfo, setCardInfo] = useState<CardInfo>(card);
   const { removerCard } = useContext(CardContext);
 
-
   return (
     <View
       style={[styles.cardContainer, { width: cardWidth, height: cardHeight }]}
@@ -40,21 +39,34 @@ const Card = ({ card }: { card: CardInfo }) => {
           <View style={styles.textContainer}>
             <Text style={styles.cardTitle}>{cardInfo.text}</Text>
           </View>
-         
-          <TouchableOpacity onPress={() => {
-            removerCard(card.id);
-          }}>
-          <Image
-            source={require("../../../assets/trash-bin.png")}
-            style={styles.image}
-          />
+
+          <TouchableOpacity
+            onPress={() => {
+              removerCard(card.id);
+            }}
+          >
+            <Image
+              source={require("../../../assets/trash-bin.png")}
+              style={styles.image}
+            />
           </TouchableOpacity>
         </View>
 
         <View style={styles.row}>
-          <Text>{cardInfo.horaTarefa}</Text>
-
-          <Text>{cardInfo.diaTarefa}</Text>
+          <View style={styles.sidebyside}>
+            <Image
+              source={require("../../../assets/time.png")}
+              style={styles.icon}
+            />
+            <Text>{cardInfo.horaTarefa}</Text>
+          </View>
+          <View style={styles.sidebyside}>
+            <Image
+              source={require("../../../assets/calendar.png")}
+              style={styles.icon}
+            />
+            <Text>{cardInfo.diaTarefa}</Text>
+          </View>
 
           <View style={styles.tag}>
             <Text style={{ color: "#0494fc" }}>{cardInfo.tag}</Text>

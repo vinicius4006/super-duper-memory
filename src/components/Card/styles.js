@@ -54,4 +54,15 @@ export const styles = StyleSheet.create({
     borderColor: "#0494fc",
     borderWidth: 2,
   },
+  icon: {
+    width: 20,
+    height: 20,
+  },
+
+  sidebyside: {
+    flex: 0,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });

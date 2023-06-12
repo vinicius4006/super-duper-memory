@@ -16,7 +16,7 @@ const AppBar = () => {
         style={styles.image}
       />
       <View style={styles.buttonContainer}>
-        <Button title="Sign Out" onPress={handleSignOut} color={'white'}  />
+        <Button title="Sair" onPress={handleSignOut} color={'white'}  />
       </View>
     </View>
   );

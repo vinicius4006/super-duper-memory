@@ -5,8 +5,8 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-start",
     alignItems: "center",
-    marginTop: 30,
   },
+  containerList: {},
   containerFlat: {
     flex: 1,
     justifyContent: "flex-start",
@@ -15,6 +15,6 @@ export const styles = StyleSheet.create({
 
   btn: {
     width: "60%",
-   marginBottom: 85
+    marginBottom: 85,
   },
 });

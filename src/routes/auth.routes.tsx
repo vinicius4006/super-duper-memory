@@ -2,13 +2,13 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import SignIn from "../pages/Signin";
-import { CardProvider } from "../contexts/controllerCard";
+
 
 const AuthStack = createStackNavigator();
 
 const AuthRoutes: React.FC = () => (
   <AuthStack.Navigator>
-    <AuthStack.Screen name="SignIn" component={SignIn} />
+    <AuthStack.Screen name="Login" component={SignIn} />
   </AuthStack.Navigator>
 );
 
