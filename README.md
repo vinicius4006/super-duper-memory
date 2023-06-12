@@ -57,9 +57,10 @@ Este é um aplicativo de tarefas simples desenvolvido com React Native e Expo. E
 
 ### Telas
 
-| <img src="https://github.com/vinicius4006/super-duper-memory/assets/28130158/bc94a323-16a4-4b08-87e0-cd5986a5a2dc" alt="Login" width="300"> | <img src="https://github.com/vinicius4006/super-duper-memory/assets/28130158/c5b771a2-678d-4cc5-99be-f836cde406d9" alt="Dashboard" width="300"> | <img src="https://github.com/vinicius4006/super-duper-memory/assets/28130158/7dc3b9df-46aa-4f1f-8d1e-68891b3b9beb" alt="Filtro" width="300"> | <img src="https://github.com/vinicius4006/super-duper-memory/assets/28130158/b6d011f6-3726-40fc-a213-e7cc5286ef07" alt="CriacaoDeTarefas" width="300">
-| :-------------------------------------------------------------: | :-------------------------------------------------------------: | :-------------------------------------------------------------: | :-------------------------------------------------------------: | :-------------------------------------------------------------: |
-|                       Login                         |                       Dashboard                         |                       Filtro                         |                       Criação de Tarefas                         
+| <img src="https://github.com/vinicius4006/super-duper-memory/assets/28130158/bc94a323-16a4-4b08-87e0-cd5986a5a2dc" alt="Login" width="300"> | <img src="https://github.com/vinicius4006/super-duper-memory/assets/28130158/c5b771a2-678d-4cc5-99be-f836cde406d9" alt="Dashboard" width="300"> 
+
+| <img src="https://github.com/vinicius4006/super-duper-memory/assets/28130158/7dc3b9df-46aa-4f1f-8d1e-68891b3b9beb" alt="Filtro" width="300"> | <img src="https://github.com/vinicius4006/super-duper-memory/assets/28130158/b6d011f6-3726-40fc-a213-e7cc5286ef07" alt="CriacaoDeTarefas" width="300">
+          
 
 
 ## Contribuição
