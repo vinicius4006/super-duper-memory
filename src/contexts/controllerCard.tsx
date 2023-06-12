@@ -52,7 +52,7 @@ export const CardProvider: React.FC<React.PropsWithChildren<{}>> = ({
   };
   const salvarTarefa = async (card: CardInfo) => {
     await api.saveCard(card);
-    setCards((prevCards) => [...prevCards, card]);
+    loadData();
   };
 
   return (

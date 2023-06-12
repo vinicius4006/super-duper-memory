@@ -11,7 +11,6 @@ import { styles as stylesTxt } from "../../components/Card/styles";
 import CardContext from "../../contexts/controllerCard";
 import Search from "../../components/Search";
 
-
 const Dashboard: React.FC = () => {
   const { loadData, cards } = useContext(CardContext);
   const navigation = useNavigation();
@@ -34,10 +33,11 @@ const Dashboard: React.FC = () => {
         )}
 
         <FlatList
-          data={cards.reverse()}
+          data={cards}
           renderItem={(itemInfo) => (
             <Card key={itemInfo.index} card={itemInfo.item} />
           )}
+       
           keyExtractor={(itemInfo) => itemInfo.id.toString()}
           numColumns={1}
           contentContainerStyle={styles.containerList}

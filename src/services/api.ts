@@ -25,7 +25,7 @@ const saveCard = async (card: CardInfo) => {
   try {
     const fileData = await FileSystem.readAsStringAsync(filePath);
     const jsonData: { cards: CardInfo[] } = JSON.parse(fileData);
-
+    card.id = jsonData.cards.length + 1;
     jsonData.cards.push(card);
 
     const updatedJsonData = JSON.stringify(jsonData);
@@ -36,8 +36,6 @@ const saveCard = async (card: CardInfo) => {
   }
 };
 
-const updatedCard = async (card: CardInfo) => {
-
-}
+const updatedCard = async (card: CardInfo) => {};
 
 export default { loadCards, saveCard };
