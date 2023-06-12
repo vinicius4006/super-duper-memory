@@ -8,7 +8,6 @@ Este é um aplicativo de tarefas simples desenvolvido com React Native e Expo. E
 - Visualizar todas as tarefas salvas em uma lista.
 - Marcar tarefas como concluídas.
 - Receber notificações quando a hora de conclusão da tarefa estiver próxima.
-- Editar tarefas existentes.
 - Excluir tarefas.
 
 ## Instalação
