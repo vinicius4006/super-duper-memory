@@ -83,6 +83,20 @@ Este é um aplicativo de tarefas simples desenvolvido com React Native e Expo. E
 
 ![criacao](https://github.com/vinicius4006/super-duper-memory/assets/28130158/3568f8b4-45a6-4601-8ea6-362e442cad2c)
 
+## To Do
+
+* Push notification
+* Atualizar card para persistir o "checked"
+* Remoçao do card
+* Divisão entre tarefas futuras e as de "hoje"
+
+## É preciso melhorar
+
+* Responsividade
+* Hora limite
+* Ajustes de layout como input.
+* Com certeza há mais...
+
 ## Contribuição
 
 Se você quiser contribuir para este projeto, fique à vontade para criar um pull request com suas melhorias. Será um prazer revisar suas contribuições.
