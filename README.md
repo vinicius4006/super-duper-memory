@@ -63,6 +63,9 @@ Este é um aplicativo de tarefas simples desenvolvido com React Native e Expo. E
           
 ## Funcionamento
 
+> Login está funcionando com o Firebase
+> Armazenamento em um .json
+
 ### Login
 
 ![login](https://github.com/vinicius4006/super-duper-memory/assets/28130158/f907428c-1825-424b-bee1-28ef1b26f298)
