@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { CardInfo } from "../data/Card";
-import { Status, Tags } from "../data/enums";
+import api from "../services/api";
 
 const CardContext = createContext<CardContextData>({} as CardContextData);
 
@@ -20,107 +20,9 @@ export const CardProvider: React.FC<React.PropsWithChildren<{}>> = ({
 
   const loadData = async () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    const mock = [
-      new CardInfo(1, true, "Exemplo de texto", "8:00", "13/06", Tags.Q2BANK),
-      new CardInfo(
-        2,
-        false,
-        "Exemplo de texto 2",
-        "9:00",
-        "14/06",
-        Tags.Q2INGRESSOS
-      ),
-      new CardInfo(
-        4,
-        false,
-        "Exemplo de texto 3",
-        "10:00",
-        "15/06",
-        Tags.Q2PAY
-      ),
-      new CardInfo(
-        5,
-        false,
-        "Exemplo de texto 3",
-        "10:00",
-        "15/06",
-        Tags.Q2BANK
-      ),
-      new CardInfo(
-        6,
-        false,
-        "Exemplo de texto 3",
-        "10:00",
-        "15/06",
-        Tags.Q2INGRESSOS
-      ),
-      new CardInfo(
-        7,
-        false,
-        "Exemplo de texto 3",
-        "10:00",
-        "15/06",
-        Tags.Q2PAY
-      ),
-      new CardInfo(
-        8,
-        false,
-        "Exemplo de texto 3",
-        "10:00",
-        "15/06",
-        Tags.Q2BANK
-      ),
-      new CardInfo(
-        9,
-        false,
-        "Exemplo de texto 3",
-        "10:00",
-        "15/06",
-        Tags.Q2INGRESSOS
-      ),
-      new CardInfo(
-        10,
-        false,
-        "Exemplo de texto 3",
-        "10:00",
-        "15/06",
-        Tags.Q2PAY
-      ),
-      new CardInfo(
-        11,
-        false,
-        "Exemplo de texto 3",
-        "10:00",
-        "15/06",
-        Tags.Q2BANK
-      ),
-      new CardInfo(
-        12,
-        false,
-        "Exemplo de texto 3",
-        "10:00",
-        "15/06",
-        Tags.Q2INGRESSOS
-      ),
-      new CardInfo(
-        13,
-        false,
-        "Exemplo de texto 3",
-        "10:00",
-        "15/06",
-        Tags.Q2PAY
-      ),
-      new CardInfo(
-        14,
-        false,
-        "Exemplo de texto 3",
-        "10:00",
-        "15/06",
-        Tags.Q2BANK
-      ),
-    ];
-    setCards(mock);
-    setCpCards(mock);
+    const data = await api.loadCards();
+    setCards(data);
+    setCpCards(data);
   };
 
   const removerCard = async (id: number) => {
@@ -149,6 +51,7 @@ export const CardProvider: React.FC<React.PropsWithChildren<{}>> = ({
     }
   };
   const salvarTarefa = async (card: CardInfo) => {
+    await api.saveCard(card);
     setCards((prevCards) => [...prevCards, card]);
   };
 

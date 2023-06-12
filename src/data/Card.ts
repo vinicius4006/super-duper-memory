@@ -22,5 +22,5 @@ export class CardInfo {
     this.tag = tag;
   }
 
-
 }
+
