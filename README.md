@@ -64,6 +64,7 @@ Este é um aplicativo de tarefas simples desenvolvido com React Native e Expo. E
 ## Funcionamento
 
 > Login está funcionando com o Firebase
+
 > Armazenamento em um .json
 
 ### Login
