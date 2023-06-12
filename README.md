@@ -61,6 +61,11 @@ Este é um aplicativo de tarefas simples desenvolvido com React Native e Expo. E
 
 | <img src="https://github.com/vinicius4006/super-duper-memory/assets/28130158/7dc3b9df-46aa-4f1f-8d1e-68891b3b9beb" alt="Filtro" width="300"> | <img src="https://github.com/vinicius4006/super-duper-memory/assets/28130158/b6d011f6-3726-40fc-a213-e7cc5286ef07" alt="CriacaoDeTarefas" width="300">
           
+## Funcionamento
+
+![login](https://github.com/vinicius4006/super-duper-memory/assets/28130158/f9c8596e-dce1-4785-93d3-5e580abe21c9)
+
+
 
 
 ## Contribuição
